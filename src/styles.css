@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'hiragino sans gb';
+    color: #404040;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+.container {
+    display: flex;
+}
+
+.container div {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+button {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: 16pt;
+    color: #404040;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+    transition: border-color 100ms ease-in-out;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    border-color: #404040;
+}
+
+p {
+    background-color: #99cc33;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    border: solid 2px #808080;
+    color: white;
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 1rem 0 0 0;
+}
+
+.show {
+    animation-name: go-down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.none {
+    opacity: 0;
+}
+
+@keyframes go-down {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+}

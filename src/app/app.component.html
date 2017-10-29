@@ -1,0 +1,13 @@
+<h1 *ngIf="type">
+  {{type.name}}
+</h1>
+<div class="container">
+  <div>
+    <button (click)="start()">Start</button>
+    <p [ngClass]="style">{{init}}</p>
+  </div>
+  <div>
+    <button (click)="subscribe()">Subscribe</button>
+    <p *ngFor="let value of valuesFromSubscription">{{value}}</p>
+  </div>
+</div>
